@@ -1,0 +1,14 @@
+.seperator {
+  background: #000;
+  height: 50px;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+}
+.title {
+  color: rgb(4, 4, 4);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif,
+    Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 4px #aaa;
+  text-indent: 50px;
+}

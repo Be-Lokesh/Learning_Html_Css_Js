@@ -1,0 +1,19 @@
+.tittle {
+  color: rgb(27, 25, 25);
+  font-weight: bold;
+  text-align: center;
+
+  border: 1px solid black;
+}
+.style {
+  color: black;
+  font-family: "solidar", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid black;
+}
+.text-container {
+  margin-top: 18vh;
+  margin-right: 20vw;
+  margin-left: 20vw;
+}

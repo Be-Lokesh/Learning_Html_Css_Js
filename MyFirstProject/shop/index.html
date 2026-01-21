@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../globle.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="navBar-2"></div>
+    <div class="container">
+      <div>
+        <span
+          ><a style="color: gray; text-decoration: none" href="/home/index.html"
+            >Home</a
+          ></span
+        >
+        > <span>Shop</span>
+      </div>
+      <div class="card-wraper">
+        <div class="card">
+          <div class="img-wrapper">
+            <img class="card-image" src="../image/Dipper Pines wallpaper.jpg" />
+          </div>
+          <div>
+            <h1>Dipper</h1>
+            <div class="limited-stock">Limited Stock</div>
+            <div class="price-data">
+              <span>Rs 2000</span>
+              <span>12 Sold</span>
+            </div>
+            <div class="crossed-out">
+              <p>Rs. 2,000</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-wrapper">
+            <img class="card-image" src="../image/Fin chilling.jpg" />
+          </div>
+          <div>
+            <h1>Fin</h1>
+            <div class="limited-stock">Limited Stock</div>
+            <div class="price-data">
+              <span>Rs 1800</span>
+              <span>8 Sold</span>
+            </div>
+            <div class="crossed-out">
+              <p>Rs. 2,000</p>
+            </div>
+
+            <img
+              style="width: 20px; height: 20px; cursor: pointer"
+              src="/image/icon-svg/heart-regular-full.svg"
+              alt=""
+            />
+            <div class="Bnt-wrapper">
+              <button class="button">Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-wrapper">
+            <img class="card-image" src="../image/ice bear !!.jpg" />
+          </div>
+          <div>
+            <h1>Ice Bear</h1>
+            <div class="limited-stock">Limited Stock</div>
+            <div class="price-data">
+              <span>Rs 2000</span>
+              <span>12 Sold</span>
+            </div>
+            <div class="crossed-out">
+              <p>Rs. 2,000</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-wrapper">
+            <img class="card-image" src="../image/wenaria.jpg" />
+          </div>
+          <div>
+            <h1>Toxic</h1>
+            <div class="limited-stock">Limited Stock</div>
+            <div class="price-data">
+              <span>Rs 2000</span>
+              <span>12 Sold</span>
+            </div>
+            <div class="crossed-out">
+              <p>Rs. 2,000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const navbar = document.getElementById("navBar-2");
+    if (navbar) {
+      fetch("../navBar.html")
+        .then((response) => {
+          if (!response.ok) throw new Error("Failed to load navbar");
+          return response.text();
+        })
+        .then((html) => {
+          navbar.innerHTML = html;
+        })
+        .catch((error) => {
+          navbar.textContent = "Navigation unavailable.";
+          console.error(error);
+        });
+    }
+  </script>
+</html>

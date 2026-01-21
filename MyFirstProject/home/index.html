@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../globle.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="seperator"></div>
+    <h1 class="title">Driven by sound. Trusted by many</h1>
+  </body>
+  <script>
+    const navbar = document.getElementById("navbar");
+    if (navbar) {
+      fetch("../navBar.html")
+        .then((response) => {
+          if (!response.ok) throw new Error("Failed to load navbar");
+          return response.text();
+        })
+        .then((html) => {
+          navbar.innerHTML = html;
+        })
+        .catch((error) => {
+          navbar.textContent = "Navigation unavailable.";
+          console.error(error);
+        });
+    }
+  </script>
+</html>
