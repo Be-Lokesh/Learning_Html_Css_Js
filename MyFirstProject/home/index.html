@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,8 +11,132 @@
     <div id="navbar"></div>
     <div class="seperator"></div>
     <h1 class="title">Driven by sound. Trusted by many</h1>
+    <div class="container">
+      <div class="text-div">
+        <h1>Shop By Category</h1>
+        <span class="view-all">View All</span>
+      </div>
+      <div class="category-list">
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+        <img
+          class="category-image"
+          src="../image/ice bear !!.jpg"
+          alt=" ice bear"
+        />
+      </div>
+    </div>
   </body>
   <script>
+    const slider = document.querySelector(".category-list");
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      slider.classList.add("active");
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener("mouseleave", () => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+
+    slider.addEventListener("mouseup", () => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      slider.scrollLeft = scrollLeft - walk;
+    });
+
     const navbar = document.getElementById("navbar");
     if (navbar) {
       fetch("../navBar.html")

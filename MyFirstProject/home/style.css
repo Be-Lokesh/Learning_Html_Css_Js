@@ -2,13 +2,43 @@
   background: #000;
   height: 50px;
   width: 100%;
-  font-family: "Times New Roman", Times, serif;
 }
 .title {
   color: rgb(4, 4, 4);
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif,
-    Helvetica, sans-serif;
   text-align: center;
   text-shadow: 2px 2px 4px #aaa;
   text-indent: 50px;
+  font-size: 50px;
+}
+.text-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.view-all {
+  text-decoration: none;
+}
+.view-all:hover {
+  text-decoration: underline;
+}
+.category-list {
+  display: flex;
+  gap: 30px;
+  justify-content: start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+}
+
+.category-list:active {
+  cursor: grabbing;
+}
+
+.category-list::-webkit-scrollbar {
+  display: none;
+}
+.category-list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
