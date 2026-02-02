@@ -6,17 +6,13 @@
     <title>Shop</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../globle.css" />
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <div id="navBar-2"></div>
     <div class="container">
-      <div>
+      <div class="span-list">
         <span
-          ><a style="color: gray; text-decoration: none" href="/home/index.html"
+          ><a style="color: gray; text-decoration: none" href="/MyFirstProject/home/index.html"
             >Home</a
           ></span
         >
@@ -129,10 +125,12 @@
                 />
               </button>
               <button class="button">Add to Cart</button>
+              
             </div>
           </div>
         </div>
       </div>
+        <div id="footer"></div>
     </div>
   </body>
 
@@ -152,5 +150,42 @@
           console.error(error);
         });
     }
+       const footer = document.getElementById("footer");
+    if (footer) {
+      fetch("../footer.html")
+        .then((response) => {
+          if (!response.ok) throw new Error("Failed to load footer");
+          return response.text();
+        })
+        .then((html) => {
+          footer.innerHTML = html;
+        })
+        .catch((error) => {
+          footer.textContent = "Navigation unavailable.";
+          console.error(error);
+        });
+    }
+
+    const students = [
+      { img: "/MyFirstProject/image/Fin chilling.jpg", name: "fin" },
+      { img: "/MyFirstProject/image/Monkey D_ Luffy Red Wallpaper.jpg", name: "monkey d luffy" },
+      { img: "/MyFirstProject/image/Dipper Pines wallpaper.jpg", name: "dipper pines" },
+      { img: "/MyFirstProject/image/ice bear !!.jpg", name: "ice bear" },
+      { img: "/MyFirstProject/image/wenaria.jpg", name: "wenaria" },
+    ];
+
+    const container = document.getElementById("category-list");
+
+      // .map() → create HTML strings
+      const imgContainerCardHTML = students.map(
+        (student) => `
+        <div class="img-container-card">
+          <img class="category-image" src="${student.img}" alt="${student.name}"/>
+        <p>${student.name}</p>
+      </div>
+    `,
+    );
+    // Join them and put into DOM
+    container.innerHTML = imgContainerCardHTML.join("");
   </script>
 </html>

@@ -16,94 +16,10 @@
         <h1>Shop By Category</h1>
         <span class="view-all">View All</span>
       </div>
-      <div class="category-list">
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-        <img
-          class="category-image"
-          src="../image/ice bear !!.jpg"
-          alt=" ice bear"
-        />
-      </div>
+      <div class="category-list" id="category-list"></div>
     </div>
+
+    <div id="footer"></div>
   </body>
   <script>
     const slider = document.querySelector(".category-list");
@@ -152,5 +68,44 @@
           console.error(error);
         });
     }
+
+    const footer = document.getElementById("footer");
+    if (footer) {
+      fetch("../footer.html")
+        .then((response) => {
+          if (!response.ok) throw new Error("Failed to load footer");
+          return response.text();
+        })
+        .then((html) => {
+          footer.innerHTML = html;
+        })
+        .catch((error) => {
+          footer.textContent = "Navigation unavailable.";
+          console.error(error);
+        });
+    }
+
+    const students = [
+      { img: "/MyFirstProject/image/Fin chilling.jpg", name: "fin" },
+      { img: "/MyFirstProject/image/Monkey D_ Luffy Red Wallpaper.jpg", name: "monkey d luffy" },
+      { img: "/MyFirstProject/image/Dipper Pines wallpaper.jpg", name: "dipper pines" },
+      { img: "/MyFirstProject/image/ice bear !!.jpg", name: "ice bear" },
+      { img: "/MyFirstProject/image/wenaria.jpg", name: "wenaria" },
+    ];
+
+    const container = document.getElementById("category-list");
+
+      // .map() → create HTML strings
+      const imgContainerCardHTML = students.map(
+        (student) => `
+        <div class="img-container-card">
+          <img class="category-image" src="${student.img}" alt="${student.name}"/>
+        <p>${student.name}</p>
+      </div>
+    `,
+    );
+    // Join them and put into DOM
+    container.innerHTML = imgContainerCardHTML.join("");
   </script>
 </html>
+  
