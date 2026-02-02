@@ -1,41 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Track My Order</title>
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../globle.css" />
     <link rel="stylesheet" href="indext.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../footer.html" />
   </head>
   <body>
     <div id="navBar-2"></div>
-    <div class="text-container">
-      <h1 class="tittle">Track My Order</h1>
-      <h2 class="style">
-        To track your order please enter your Tracking ID in the box below and
-        press the "Track" button. This was given to you on your receipt and in
-        the confirmation email you should have received.
-      </h2>
+    <div class="container">
+      <div>
+        <span
+          ><a
+            style="color: gray; text-decoration: none"
+            href="/MyFirstProject/home/index.html"
+            >Home</a
+          ></span
+        >
+        > <span>Track My Order</span>
+      </div>
+      <div class="text-container">
+        <h1 class="tittle">Track My Order</h1>
+        <h2 class="style">
+          To track your order please enter your Tracking ID in the box below and
+          press the "Track" button. This was given to you on your receipt and in
+          the confirmation email you should have received.
+        </h2>
+        <div class="login">
+          <label for="tracking-id"></label>
+          <input
+            type="text"
+            id="tracking-id"
+            name="tracking-id"
+            placeholder="Enter your order id"
+            
+          > <button style=" position: absolute;">Track</button></input>
+        </div>
+      </div>
     </div>
-
-    <script>
-      const navbar = document.getElementById("navBar-2");
-      if (navbar) {
-        fetch("../navBar.html")
-          .then((response) => {
-            if (!response.ok) throw new Error("Failed to load navbar");
-            return response.text();
-          })
-          .then((html) => {
-            navbar.innerHTML = html;
-          })
-          .catch((error) => {
-            navbar.textContent = "Navigation unavailable.";
-            console.error(error);
-          });
-      }
-    </script>
+    <div id="footer"></div>
   </body>
+  <script>
+    const navbar = document.getElementById("navBar-2");
+    if (navbar) {
+      fetch("../navBar.html")
+        .then((response) => {
+          if (!response.ok) throw new Error("Failed to load navbar");
+          return response.text();
+        })
+        .then((html) => {
+          navbar.innerHTML = html;
+        })
+        .catch((error) => {
+          navbar.textContent = "Navigation unavailable.";
+          console.error(error);
+        });
+    }
+    const footer = document.getElementById("footer");
+    if (footer) {
+      fetch("../footer.html")
+        .then((response) => {
+          if (!response.ok) throw new Error("Failed to load footer");
+          return response.text();
+        })
+        .then((html) => {
+          footer.innerHTML = html;
+        })
+        .catch((error) => {
+          footer.textContent = "Navigation unavailable.";
+          console.error(error);
+        });
+    }
+
+    const students = [
+      { img: "/MyFirstProject/image/Fin chilling.jpg", name: "fin" },
+      {
+        img: "/MyFirstProject/image/Monkey D_ Luffy Red Wallpaper.jpg",
+        name: "monkey d luffy",
+      },
+      {
+        img: "/MyFirstProject/image/Dipper Pines wallpaper.jpg",
+        name: "dipper pines",
+      },
+      { img: "/MyFirstProject/image/ice bear !!.jpg", name: "ice bear" },
+      { img: "/MyFirstProject/image/wenaria.jpg", name: "wenaria" },
+    ];
+
+    const container = document.getElementById("category-list");
+
+    // .map() → create HTML strings
+    const imgContainerCardHTML = students.map(
+      (student) => `
+        <div class="img-container-card">
+          <img class="category-image" src="${student.img}" alt="${student.name}"/>
+        <p>${student.name}</p>
+      </div>
+    `,
+    );
+    // Join them and put into DOM
+    container.innerHTML = imgContainerCardHTML.join("");
+  </script>
 </html>

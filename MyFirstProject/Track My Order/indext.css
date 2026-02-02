@@ -2,18 +2,43 @@
   color: rgb(27, 25, 25);
   font-weight: bold;
   text-align: center;
-
-  border: 1px solid black;
 }
 .style {
   color: black;
   font-family: "solidar", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
-  border: 1px solid black;
+ 
 }
 .text-container {
-  margin-top: 18vh;
-  margin-right: 20vw;
-  margin-left: 20vw;
+  margin-top: 15vh;
+  margin-right: 25vw;
+  margin-left: 25vw;
+ 
+}
+.login {
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.login input {
+  padding-left: 8px 16px;
+  margin-right: 18px;
+  width: 200px;
+  border-radius: 4px;
+  border: 5px solid #939393;
+
+}
+.login button {
+  background-color: #070708;
+  color: rgb(182, 182, 182);
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  left:878px;
+  padding: 3px 7px;
+}
+.login button:hover {
+  background-color: #f9f9fc;
 }
