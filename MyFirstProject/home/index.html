@@ -11,18 +11,154 @@
     <div id="navbar"></div>
     <div class="seperator"></div>
     <h1 class="title">Driven by sound. Trusted by many</h1>
+ <swiper-container class="mySwiper" pagination="true">
+        <swiper-slide><a href=""></a><img src="../image/Best Prime Day AirPods deals 2023_ AirPods Pro 2 and AirPods Max are on sale for their lowest_.jpeg" alt=""></a></swiper-slide>
+        <swiper-slide><img src="../image/AirPods.jpeg" alt=""></swiper-slide>
+        <swiper-slide><img src="../image/AirPods.jpeg" alt=""></swiper-slide>
+        <swiper-slide><img src="../image/Spider Metal Headphone Attachments_ Universal Fit, Sony XM4, XM5, XM6, Any Headphones With Flat Backs - Etsy.jpeg" alt=""></swiper-slide>
+        <swiper-slide><img src="" alt=""></swiper-slide>
+    
+    </swiper-container>
     <div class="container">
       <div class="text-div">
-        <h1>Shop By Category</h1>
+        <b>Shop By Category</b>
         <span class="view-all">View All</span>
+      </div>
+      <div class="gallery-container">
+        <div class="gallery-scroll" id="gallery-scroll"></div>
       </div>
       <div class="category-list" id="category-list"></div>
     </div>
+    <div class="card-wraper">
+      <div class="card">
+        <div class="img-wrapper">
+          <img
+            class="card-image"
+            src="../image/Sony Wireless Headphones.jpeg"
+          />
+        </div>
+        <div>
+          <h1>P9 Wireless Bluetooth Headphones Latest with Stereo Headset..</h1>
+          <div class="limited-stock">Limited Stock</div>
+          <div class="price-data">
+            <span>Rs 2000</span>
+            <span>12 Sold</span>
+          </div>
+          <div class="discount-wapper">
+            <p class="crossed-out">Rs. 2,000</p>
+            <p class="discount">18% Off</p>
+          </div>
 
+          <div class="Bnt-wrapper">
+            <button class="wish-button">
+              <img
+                style="width: 20px; height: 20px; cursor: pointer"
+                src="/MyFirstProject/image/icon-svg/heart-regular-full.svg"
+                alt=""
+              />
+            </button>
+            <button class="button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img-wrapper">
+          <img
+            class="card-image"
+            src="../image/Tired of tangled cords and mediocre sound_ Meet….jpeg"
+          />
+        </div>
+        <div>
+          <h1>
+            TWS Wireless Bluetooth Airpods with Super Sound Premium Pro 2..
+          </h1>
+          <div class="limited-stock">Limited Stock</div>
+          <div class="price-data">
+            <span>Rs 1800</span>
+            <span>8 Sold</span>
+          </div>
+          <div class="discount-wapper">
+            <p class="crossed-out">Rs. 2,000</p>
+            <p class="discount">18% Off</p>
+          </div>
+          <div class="Bnt-wrapper">
+            <button class="wish-button">
+              <img
+                style="width: 20px; height: 20px; cursor: pointer"
+                src="/MyFirstProject/image/icon-svg/heart-regular-full.svg"
+                alt=""
+              />
+            </button>
+            <button class="button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img-wrapper">
+          <img
+            class="card-image"
+            src="../image/Here is the prompt to create this awesome….jpeg"
+          />
+        </div>
+        <div>
+          <h1>True Wireless Bluetooth Airpods Super Sound Quality..</h1>
+          <div class="limited-stock">Limited Stock</div>
+          <div class="price-data">
+            <span>Rs 2000</span>
+            <span>12 Sold</span>
+          </div>
+          <div class="discount-wapper">
+            <p class="crossed-out">Rs. 2,000</p>
+            <p class="discount">18% Off</p>
+          </div>
+          <div class="Bnt-wrapper">
+            <button class="wish-button">
+              <img
+                style="width: 20px; height: 20px; cursor: pointer"
+                src="/MyFirstProject/image/icon-svg/heart-regular-full.svg"
+                alt=""
+              />
+            </button>
+            <button class="button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img-wrapper">
+          <img
+            class="card-image"
+            src="../image/🔹 AirPods Pro 🔹 🏷️ Ціна_ 1649 грн ❌ 1299 грн ✅….jpg"
+          />
+        </div>
+        <div>
+          <h1>P9 Wireless Bluetooth Headphones Latest with Stereo Headset..</h1>
+          <div class="limited-stock">Limited Stock</div>
+          <div class="price-data">
+            <span>Rs 2000</span>
+            <span>12 Sold</span>
+          </div>
+          <div class="discount-wapper">
+            <p class="crossed-out">Rs. 2,000</p>
+            <p class="discount">18% Off</p>
+          </div>
+          <div class="Bnt-wrapper">
+            <button class="wish-button">
+              <img
+                style="width: 20px; height: 20px; cursor: pointer"
+                src="/MyFirstProject/image/icon-svg/heart-regular-full.svg"
+                alt=""
+              />
+            </button>
+            <button class="button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="footer"></div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script>
-    const slider = document.querySelector(".category-list");
+    const slider = document.getElementById("gallery-scroll");
 
     let isDown = false;
     let startX;
@@ -80,32 +216,74 @@
           footer.innerHTML = html;
         })
         .catch((error) => {
-          footer.textContent = "Navigation unavailable.";
+          footer.textContent = "Footer unavailable.";
           console.error(error);
         });
     }
 
     const students = [
-      { img: "/MyFirstProject/image/Fin chilling.jpg", name: "fin" },
-      { img: "/MyFirstProject/image/Monkey D_ Luffy Red Wallpaper.jpg", name: "monkey d luffy" },
-      { img: "/MyFirstProject/image/Dipper Pines wallpaper.jpg", name: "dipper pines" },
-      { img: "/MyFirstProject/image/ice bear !!.jpg", name: "ice bear" },
-      { img: "/MyFirstProject/image/wenaria.jpg", name: "wenaria" },
+      {
+        img: "/MyFirstProject/image/Sony Wireless Headphones.jpeg",
+        name: "Sony Wireless Headphones",
+      },
+      {
+        img: "/MyFirstProject/image/AirPods Pro 2 – Personalized Spatial Audio, H2 Chip & Touch-Control Earbuds.jpeg",
+        name: "AirPods Pro 2",
+      },
+      {
+        img: "/MyFirstProject/image/Apple Vision Pro Headset.jpeg",
+        name: "Apple Vision Pro Headset",
+      },
+      {
+        img: "/MyFirstProject/image/🔹 AirPods Pro 🔹 🏷️ Ціна_ 1649 грн ❌ 1299 грн ✅….jpg",
+        name: "AirPods Pro",
+      },
+      {
+        img: "/MyFirstProject/image/Casque Sans Fil Sony WH-CH520.jpeg",
+        name: "Sony WH-CH520",
+      },
+      {
+        img: "/MyFirstProject/image/Tired of tangled cords and mediocre sound_ Meet….jpeg",
+        name: "Tired of tangled cords",
+      },
+      {
+        img: "/MyFirstProject/image/Apple AirPods Pro (2nd Generation) Wireless Ear Buds with USB-C Charging.jpeg",
+        name: "AirPods Pro",
+      },
+      {
+        img: "/MyFirstProject/image/Sign In _ Sign Up.jpeg",
+        name: "JBL headphones",
+      },
     ];
 
-    const container = document.getElementById("category-list");
-
+    const galleryScroll = document.getElementById("gallery-scroll");
+    if (galleryScroll) {
       // .map() → create HTML strings
-      const imgContainerCardHTML = students.map(
+      const galleryItemsHTML = students.map(
         (student) => `
-        <div class="img-container-card">
-          <img class="category-image" src="${student.img}" alt="${student.name}"/>
-        <p>${student.name}</p>
-      </div>
-    `,
-    );
-    // Join them and put into DOM
-    container.innerHTML = imgContainerCardHTML.join("");
+        <div class="gallery-item">
+          <img class="gallery-image" src="${student.img}" alt="${student.name}"/>
+          <p>${student.name}</p>
+        </div>
+      `,
+      );
+      // Join them and put into DOM
+      galleryScroll.innerHTML = galleryItemsHTML.join("");
+    }
+
+    // Carousel arrow behavior for main carousel
+    const mainCarousel = document.getElementById("main-carousel");
+    const prevBtn = document.querySelector(".carousel-btn.left");
+    const nextBtn = document.querySelector(".carousel-btn.right");
+
+    if (mainCarousel && prevBtn && nextBtn) {
+      const scrollAmount = () => Math.round(mainCarousel.clientWidth * 0.8);
+      prevBtn.addEventListener("click", () => {
+        mainCarousel.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
+      });
+      nextBtn.addEventListener("click", () => {
+        mainCarousel.scrollBy({ left: scrollAmount(), behavior: "smooth" });
+      });
+    }
   </script>
 </html>
-  

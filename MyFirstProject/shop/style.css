@@ -1,5 +1,6 @@
 .card-wraper {
   display: flex;
+  padding-top: 7vh;
 }
 .card {
   border: 1px solid #ddd;
@@ -85,4 +86,9 @@
 .button:hover {
   background-color: #df0606;
   color: rgb(235, 233, 237);
+}
+h1 {
+  font-size: 20px;
+  color: rgb(64, 63, 63);
+  border: 1px solid rgb(235, 15, 15)  ;
 }
