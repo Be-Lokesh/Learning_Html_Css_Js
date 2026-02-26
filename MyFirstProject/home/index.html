@@ -11,14 +11,21 @@
     <div id="navbar"></div>
     <div class="seperator"></div>
     <h1 class="title">Driven by sound. Trusted by many</h1>
- <swiper-container class="mySwiper" pagination="true">
-        <swiper-slide><a href=""></a><img src="../image/Best Prime Day AirPods deals 2023_ AirPods Pro 2 and AirPods Max are on sale for their lowest_.jpeg" alt=""></a></swiper-slide>
-        <swiper-slide><img src="../image/AirPods.jpeg" alt=""></swiper-slide>
-        <swiper-slide><img src="../image/AirPods.jpeg" alt=""></swiper-slide>
-        <swiper-slide><img src="../image/Spider Metal Headphone Attachments_ Universal Fit, Sony XM4, XM5, XM6, Any Headphones With Flat Backs - Etsy.jpeg" alt=""></swiper-slide>
-        <swiper-slide><img src="" alt=""></swiper-slide>
-    
-    </swiper-container>
+    <div class="carousel">
+      <img class="item-img" src="../image/AI AirPods Pro.jpeg" />
+      <img
+        class="item-img"
+        src="../image/Apple AirPods Pro (2nd Generation) Wireless Ear Buds with USB-C Charging.jpeg"
+      />
+      <img
+        class="item-img"
+        src="../image/Here is the prompt to create this awesome….jpeg"
+      />
+      <img
+        class="item-img"
+        src="../image/Spider Metal Headphone Attachments_ Universal Fit, Sony XM4, XM5, XM6, Any Headphones With Flat Backs - Etsy.jpeg"
+      />
+    </div>
     <div class="container">
       <div class="text-div">
         <b>Shop By Category</b>
@@ -190,7 +197,7 @@
     });
 
     const navbar = document.getElementById("navbar");
-    if (navbar) {push
+    if (navbar) {
       fetch("../navBar.html")
         .then((response) => {
           if (!response.ok) throw new Error("Failed to load navbar");

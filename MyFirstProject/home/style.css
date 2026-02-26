@@ -9,40 +9,28 @@
   text-shadow: 2px 2px 4px #aaa;
   text-indent: 50px;
   font-size: 50px;
-  border: 1px solid rgb(235, 18, 15);
 }
-.wiper-container {
-  width: 100%;
-  height: 500px;
-  padding-top: 65px;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: var(--light-color);
+.carousel {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow-x: auto;
+  gap:0.5rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 10px;
+  -webkit-overflow-scrolling: touch;
 }
-
-.swiper-slide img {
-  display: block;
+.item-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.swiper-container .mySwiper {
-  position: absolute;
-  top: 0;
-  left: 0;
+  border-radius: 10em;
+  border: 1px solid rgb(15, 235, 37);
 }
 .text-div {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 20px;
-  border: 1px solid rgb(15, 30, 235);
 }
 .view-all {
   text-decoration: none;
