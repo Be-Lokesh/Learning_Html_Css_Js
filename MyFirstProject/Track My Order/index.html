@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id="navBar-2"></div>
-    <div class="container">
+    <div class="container" id="background">
       <div>
         <span
           ><a
@@ -29,14 +29,12 @@
           the confirmation email you should have received.
         </h2>
         <div class="login">
-          <label for="tracking-id"></label>
           <input
             type="text"
             id="tracking-id"
-            name="tracking-id"
             placeholder="Enter your order ID"
-            
-          > <button >Track</button></input>
+          />
+          <button>Track</button>
         </div>
       </div>
     </div>
@@ -73,21 +71,6 @@
           console.error(error);
         });
     }
-
-    const students = [
-      { img: "/MyFirstProject/image/Fin chilling.jpg", name: "fin" },
-      {
-        img: "/MyFirstProject/image/Monkey D_ Luffy Red Wallpaper.jpg",
-        name: "monkey d luffy",
-      },
-      {
-        img: "/MyFirstProject/image/Dipper Pines wallpaper.jpg",
-        name: "dipper pines",
-      },
-      { img: "/MyFirstProject/image/ice bear !!.jpg", name: "ice bear" },
-      { img: "/MyFirstProject/image/wenaria.jpg", name: "wenaria" },
-    ];
-
     const container = document.getElementById("category-list");
 
     // .map() → create HTML strings

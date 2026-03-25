@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.navbar {
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+}
+
+.cart {
+  color: #131111;
+  position: relative;
+  background-color: white;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 30px;
+ 
+}
+.cart-amount {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  padding: 3px;
+  border-radius: 3px;
+  background-color: #e6e4e4;
+  color: rgb(240, 14, 14);
+  font-size: 16px;
+}
