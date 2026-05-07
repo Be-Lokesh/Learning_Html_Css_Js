@@ -19,7 +19,7 @@
 .carousel {
   display: flex;
   overflow-x: auto;
-  gap:0.5rem;
+  gap: 0.5rem;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding: 10px;
@@ -45,20 +45,21 @@
 }
 
 .card-wraper {
- display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 20px;
-    padding: 32px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 32px 0;
 }
 .card {
   background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-                0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: all 0.25s ease;
-    display: flex;
-    flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .img-wrapper {
@@ -75,7 +76,7 @@
   object-position: bottom;
 }
 .card:hover {
-    transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 .limited-stock {
   background: red;
@@ -125,7 +126,6 @@
 }
 .bi-heart:hover {
   background: rgb(241, 241, 241);
-
 }
 .button {
   background-color: #0e180e;
@@ -142,8 +142,7 @@
   width: 100%;
 }
 .button:hover {
-  background-color: #f5f3f3;
-  color: rgb(235, 233, 237);
+  background-color: #b22525;
 }
 
 .gallery-container {
@@ -203,4 +202,165 @@ h1 {
 }
 b {
   font-size: 30px;
+}
+
+.cart-tab {
+  width: min(380px, 100%);
+  height: 100vh;
+  background: #1f2937;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.18);
+
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  will-change: transform;
+  z-index: 1001;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-header h2 {
+  font-size: 1.5rem;
+}
+.close-out {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.close-out:hover {
+  background-color: #f60c0c;
+   border: none;
+}
+.bi-cart4 {
+  font-size: 20px;
+}
+
+.list-card {
+  flex: 1;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.total-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.total-list th,
+.total-list td {
+  padding: 10px 8px;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+.total-list th {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.total-list td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.product-name {
+  max-width: 120px;
+  word-break: break-word;
+}
+
+.quantity-input {
+  width: 60px;
+  height: 34px;
+  border: none;
+  border-radius: 8px;
+  padding: 0 8px;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.close-btn,
+.checkout-btn {
+  flex: 1;
+  height: 46px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.close-btn {
+  background: #ecedec;
+  color: #111827;
+}
+
+.checkout-btn {
+  background: white;
+  color: rgb(12, 11, 11);
+}
+
+.close-btn:hover {
+  background-color: #f60c0c;
+   border: none;
+}
+.checkout-btn:hover {
+  opacity: 0.92;
+  background-color: chartreuse;
+}
+
+.cart-icon-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #06bc06;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.cart-icon-button:hover {
+  background-color: #292b29;
+  transform: scale(1.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #df0606;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
 }
